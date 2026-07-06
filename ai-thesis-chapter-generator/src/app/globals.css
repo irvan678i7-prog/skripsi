@@ -1,0 +1,96 @@
+@import "tailwindcss";
+
+@theme {
+  --color-neon-lime: #84cc16;
+  --color-neon-pink: #ec4899;
+  --color-neon-cyan: #06b6d4;
+  --color-neon-yellow: #eab308;
+  --color-neon-orange: #f97316;
+  --color-neon-purple: #a855f7;
+  --color-neon-green: #22c55e;
+  --color-brutal-bg: #f5f0e8;
+  --color-brutal-card: #ffffff;
+  --color-brutal-border: #1a1a1a;
+}
+
+* {
+  font-family: 'Space Grotesk', 'Segoe UI', system-ui, -apple-system, sans-serif;
+}
+
+body {
+  background-color: var(--color-brutal-bg);
+  color: #1a1a1a;
+}
+
+::selection {
+  background-color: #84cc16;
+  color: #000;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-brutal-bg);
+  border-left: 2px solid #1a1a1a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1a1a1a;
+  border: 2px solid #1a1a1a;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #84cc16;
+}
+
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.brutal-shadow {
+  box-shadow: 4px 4px 0px #1a1a1a;
+}
+
+.brutal-shadow-lg {
+  box-shadow: 6px 6px 0px #1a1a1a;
+}
+
+.brutal-shadow-sm {
+  box-shadow: 2px 2px 0px #1a1a1a;
+}
+
+.brutal-btn {
+  transition: all 80ms ease;
+}
+
+.brutal-btn:hover {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0px #1a1a1a;
+}
+
+.brutal-btn:active {
+  transform: translate(4px, 4px);
+  box-shadow: none;
+}
+
+.stripe-bg {
+  background-image: repeating-linear-gradient(
+    -45deg,
+    transparent,
+    transparent 8px,
+    rgba(0, 0, 0, 0.015) 8px,
+    rgba(0, 0, 0, 0.015) 16px
+  );
+}
+
+@keyframes loading-bar {
+  0% { width: 0%; }
+  50% { width: 70%; }
+  100% { width: 100%; }
+}
